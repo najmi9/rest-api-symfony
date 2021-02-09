@@ -1,3 +1,14 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+api_auth_login:
+    path: /api/auth/login
+    methods: ['POST']
+
+api_auth_forget_password:
+    path: '/api/auth/forget-password'
+    methods: ['POST']
+    controller: App\Controller\SecurityController::forgetPassword
+
+api_auth_reset_password:
+    path: '/api/auth/reset-password'
+    methods: ['POST']
+    controller: App\Controller\SecurityController::resetPassword
+  
